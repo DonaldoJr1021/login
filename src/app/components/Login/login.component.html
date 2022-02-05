@@ -1,27 +1,41 @@
-<div class="container">
-  <div class="card">
-    <div class="card-header" text-aling="center">
-      Sign In
+ <div class="container">
+  <div class="card col-md-6 text-center">
+    <div class="card-header text-center">
+      <h3>Sign In</h3>
     </div>
     <div class="danger" *ngIf="error">
       {{errorMessage}}
     </div>
-    <div class="card-body">
-      <div class="form">
+    <div class="card-body text-center">
+      <div class="form text-center border border-light p-5">
         <div class="form-group">
-          <label>User:</label>
-          <input type="text" [(ngModel)]="user"/>
+          <input type="email" [(ngModel)]="user" class="form-control mb-4" placeholder="E-mail"/>
         </div>
         <div class="form-group">
-          <label>Password:</label>
-          <input type="password" [(ngModel)]="passw"/>
+          <input type="password" [(ngModel)]="passw" class="form-control mb-4" placeholder="password"/>
+        </div>
+        <div class="d-flex justify-content-around">
+          <div class="form-gorup">
+            <input type="checkbox" [(ngModel)]="remeber" class="md-checkbox"> Remember me
+          </div>
+          <div class="">
+            <a href="" class="link-info"> Forgot password?</a>
+          </div>
         </div>
         <div class="form-group">
-          <button class="btn btn-primary" (click)="loggin()">Login</button>
+          <button class="btn btn-info mb-4 text-light" block="true" (click)="loggin()">Sing In</button>
         </div>
+        <p> Not a member?
+          <a href="" class="link-info"> Register </a>
+        </p>
+        <p>or sign in width:</p>
+        <a type="button" class="link-info mx-2" href="https://facebook.com"><i class="fbi bi-acebook"></i></a>
+        <a type="button" class="link-info mx-2" href="https://twitter.com"><i class="bi bi-twitter"></i></a>
+        <a type="button" class="link-info mx-2" href="https://linkedin.com"><i class="bi bi-linkedin"></i></a>
+        <a type="button" class="link-info mx-2" href="https://github.com"><i class="bi bi-github"></i></a>
       </div>
     </div>
-    <div class="card-footer">
+    <div class="card-footer text-center">
       Copyright 2022
     </div>
   </div>

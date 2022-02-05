@@ -12,12 +12,14 @@ export class LoginComponent implements OnInit {
   passw: string;
   errorMessage: string;
   error: boolean;
+  remeber: boolean;
 
   constructor() {
     this.user = "";
     this.passw = ""
     this.errorMessage = "";
     this.error = false;
+    this.remeber = false;
    }
 
    loggin(){
